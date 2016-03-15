@@ -5156,6 +5156,7 @@ static void make_email_file(FILE *p,
 
 	fprintf(p, "Message-ID: <Asterisk-%d-%u-%s-%d@%s>" ENDL, msgnum + 1,
 		(unsigned int) ast_random(), mailbox, (int) getpid(), host);
+	fprintf(p, "Auto-Submitted: auto-generated");
 	if (imap) {
 		/* additional information needed for IMAP searching */
 		fprintf(p, "X-Asterisk-VM-Message-Num: %d" ENDL, msgnum + 1);
